@@ -34,7 +34,7 @@ export interface Certificate {
 	credentialUrl?: string;
 }
 
-export type ProjectType = 'web' | 'mobile' | 'data' | 'automation' | 'all';
+export type ProjectType = 'all';
 
 export interface Project {
 	id: string;
@@ -58,7 +58,7 @@ export const resume: ResumeData = {
 	name: '謝孟哲',
 	title: '全端工程師',
 	location: '台灣・新竹',
-	email: 'mengche@example.com',
+	email: 'contact@hsieh-dev.us.ci',
 	about: '專注在產品體驗與系統可維護性的全端工程師。'
 };
 
@@ -87,19 +87,24 @@ export const socialLinks: SocialLink[] = [
 
 export const education: Education[] = [
 	{
+		institution: '國立雲林科技大學',
+		location: '雲林縣斗六市大學路三段123號',
+		period: '2024 - NOW'
+	},
+	{
 		institution: '國立新竹高級工業職業學校',
 		location: '新竹市東區中華路二段2號',
-		period: '2020 - 2023'
+		period: '2021 - 2024'
 	},
 	{
 		institution: '新竹市立光華國民中學',
 		location: '新竹市北區光華北街10號',
-		period: '2017 - 2020'
+		period: '2018 - 2021'
 	},
 	{
 		institution: '新竹市北區北門國民小學',
 		location: '新竹市北區水田街33號',
-		period: '2011 - 2017'
+		period: '2012 - 2018'
 	}
 ];
 
@@ -153,21 +158,34 @@ export const projects: Project[] = [];
 
 export const certificates: Certificate[] = [
 	{
-		name: 'AWS Certified Cloud Practitioner',
-		issuer: 'Amazon Web Services',
-		date: '2023',
-		credentialUrl: 'https://example.com/cert/aws'
+		name: 'TOEIC Gold (885)',
+		issuer: '',
+		date: '',
+		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/'
 	},
 	{
-		name: 'Google Cloud Digital Leader',
-		issuer: 'Google Cloud',
+		name: '工業電子丙級',
+		issuer: '',
 		date: '2023',
-		credentialUrl: 'https://example.com/cert/gcp'
+		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/industrial-electronics-c.webp'
 	},
 	{
-		name: 'TOEIC 785',
-		issuer: 'ETS',
-		date: '2022'
+		name: '工業配線丙級',
+		issuer: '',
+		date: '2022',
+		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/industrial-wiring-c.webp'
+	},
+	{
+		name: 'GEPT 中級',
+		issuer: '',
+		date: '',
+		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/'
+	},
+	{
+		name: 'GEPT 初級',
+		issuer: '',
+		date: '',
+		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/'
 	}
 ];
 
