@@ -43,7 +43,7 @@
 		>
 			技能
 		</h2>
-		<div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+		<div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-start">
 			{#each skillCategories as category (category.category)}
 				<div
 					class="border border-border bg-bg-secondary transition-all duration-(--transition-base) hover:border-accent-primary"
@@ -74,7 +74,7 @@
 										class="flex flex-col items-center gap-2 border border-transparent bg-bg-tertiary p-6 transition-all duration-(--transition-base) hover:border-accent-primary"
 										data-testid={`tech-skill-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}
 									>
-										<img src={iconMap[skill.icon]} alt={skill.name} class="h-8 w-8" />
+										<img src={iconMap[skill.icon]} alt={skill.name} class="h-auto w-8" />
 										<span class="text-center text-sm font-medium text-text-secondary"
 											>{skill.name}</span
 										>
