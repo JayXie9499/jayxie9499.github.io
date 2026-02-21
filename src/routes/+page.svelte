@@ -206,21 +206,15 @@
 
 	<!-- Hero Section -->
 	<section
-		class="relative flex min-h-screen items-center justify-center overflow-hidden bg-bg-primary px-6 py-16 before:absolute before:top-[-50%] before:right-[-50%] before:h-full before:w-full before:animate-[pulse_8s_ease-in-out_infinite] before:bg-[radial-gradient(circle,rgba(79,70,229,0.05)_0%,transparent_70%)] before:content-['']"
+		class="relative flex min-h-[60vh] items-center justify-center overflow-hidden bg-bg-primary px-6 py-12 before:absolute before:top-[-50%] before:right-[-50%] before:h-full before:w-full before:animate-[pulse_8s_ease-in-out_infinite] before:bg-[radial-gradient(circle,rgba(79,70,229,0.05)_0%,transparent_70%)] before:content-['']"
 		data-testid="hero-section"
 	>
-		<div class="z-[1] w-full">
-			<div class="mb-12 overflow-hidden bg-transparent">
-				<div class="flex items-center border-b border-border bg-bg-tertiary px-4 py-2">
-					<span class="font-[family-name:var(--font-family-mono)] text-xs text-text-muted"
-						>user@arch ~</span
-					>
-				</div>
-				<div class="flex min-h-[120px] items-center p-8">
+		<div class="z-[1] w-full text-center">
+			<div class="mb-8">
+				<div class="flex min-h-[80px] items-center justify-center">
 					<div
 						class="flex items-center gap-4 font-[family-name:var(--font-family-mono)] text-[clamp(1.25rem,4vw,1.75rem)] text-white"
 					>
-						<span class="font-bold text-accent-primary">[user@host]:~ $</span>
 						<span class="min-h-[1.2em] text-white" data-testid="typing-text">{typedText}</span>
 						<span class="animate-[blink_1s_step-end_infinite] text-accent-primary">▋</span>
 					</div>
@@ -230,25 +224,25 @@
 				<a
 					href="#about"
 					onclick={(e) => handleNavClick(e, '#about')}
-					class="inline-block px-4 py-2 font-[family-name:var(--font-family-mono)] text-base text-text-secondary transition-colors duration-[var(--transition-fast)] hover:text-accent-primary"
+					class="inline-block border border-border px-6 py-3 font-[family-name:var(--font-family-mono)] text-base text-text-secondary transition-all duration-[var(--transition-fast)] hover:border-accent-primary hover:text-accent-primary"
 					data-testid="cta-about"
 				>
-					$ ./about --me
+					關於我
 				</a>
 				<a
 					href="#portfolio"
 					onclick={(e) => handleNavClick(e, '#portfolio')}
-					class="inline-block px-4 py-2 font-[family-name:var(--font-family-mono)] text-base text-text-secondary transition-colors duration-[var(--transition-fast)] hover:text-accent-primary"
+					class="inline-block border border-border px-6 py-3 font-[family-name:var(--font-family-mono)] text-base text-text-secondary transition-all duration-[var(--transition-fast)] hover:border-accent-primary hover:text-accent-primary"
 					data-testid="cta-portfolio"
 				>
-					$ ls ~/projects
+					查看作品
 				</a>
 			</div>
 		</div>
 	</section>
 
 	<!-- About + Education Section -->
-	<section class="bg-bg-secondary px-6 py-12" id="about" data-testid="about-section">
+	<section class="scroll-mt-20 bg-bg-secondary px-6 py-12" id="about" data-testid="about-section">
 		<div class="mx-auto w-full max-w-[1200px] px-6">
 			<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 				<!-- About Column -->
@@ -263,7 +257,7 @@
 					</div>
 
 					<!-- Contact & Social Links -->
-					<div class="mt-12" id="contact">
+					<div class="mt-12 scroll-mt-20" id="contact">
 						<h3
 							class="my-12 mb-6 font-[family-name:var(--font-family-display)] text-2xl text-text-primary"
 						>
@@ -328,7 +322,11 @@
 	</section>
 
 	<!-- Skills Section -->
-	<section class="bg-bg-primary px-6 py-24" id="skills" data-testid="tech-stack-section">
+	<section
+		class="scroll-mt-20 bg-bg-primary px-6 py-24"
+		id="skills"
+		data-testid="tech-stack-section"
+	>
 		<div class="mx-auto w-full max-w-[1200px] px-6">
 			<h2
 				class="relative mb-12 inline-block font-[family-name:var(--font-family-display)] text-[clamp(2rem,5vw,2.5rem)] text-text-primary after:absolute after:bottom-[-0.5rem] after:left-0 after:h-[3px] after:w-full after:bg-[linear-gradient(90deg,var(--color-accent-primary),var(--color-accent-secondary))] after:content-['']"
@@ -362,7 +360,11 @@
 	</section>
 
 	<!-- Portfolio Section -->
-	<section class="bg-bg-secondary px-6 py-24" id="portfolio" data-testid="portfolio-section">
+	<section
+		class="scroll-mt-20 bg-bg-secondary px-6 py-24"
+		id="portfolio"
+		data-testid="portfolio-section"
+	>
 		<div class="mx-auto w-full max-w-[1200px] px-6">
 			<h2
 				class="relative mb-12 inline-block font-[family-name:var(--font-family-display)] text-[clamp(2rem,5vw,2.5rem)] text-text-primary after:absolute after:bottom-[-0.5rem] after:left-0 after:h-[3px] after:w-full after:bg-[linear-gradient(90deg,var(--color-accent-primary),var(--color-accent-secondary))] after:content-['']"
