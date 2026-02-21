@@ -53,9 +53,8 @@ test.describe('Homepage Core Flows', () => {
 
 			// Check all navigation links are present
 			await expect(nav.getByTestId('nav-link-about')).toBeVisible();
-			await expect(nav.getByTestId('nav-link-tech-stack')).toBeVisible();
+			await expect(nav.getByTestId('nav-link-skills')).toBeVisible();
 			await expect(nav.getByTestId('nav-link-portfolio')).toBeVisible();
-			await expect(nav.getByTestId('nav-link-contact')).toBeVisible();
 		});
 	});
 
@@ -81,7 +80,7 @@ test.describe('Homepage Core Flows', () => {
 
 			// Verify mobile nav links are visible
 			await expect(drawer.getByTestId('mobile-nav-link-about')).toBeVisible();
-			await expect(drawer.getByTestId('mobile-nav-link-tech-stack')).toBeVisible();
+			await expect(drawer.getByTestId('mobile-nav-link-skills')).toBeVisible();
 		});
 
 		test('should close mobile menu when overlay is clicked', async ({ page }) => {
@@ -135,12 +134,12 @@ test.describe('Homepage Core Flows', () => {
 			const projectsGrid = page.getByTestId('projects-grid');
 
 			// Should show all 9 projects
-			const allProjects = projectsGrid.locator('.project-card');
+			const allProjects = projectsGrid.locator('> div[data-testid^="project-"]');
 			await expect(allProjects).toHaveCount(9);
 
 			// Verify "All Projects" filter is active
 			const allFilter = page.getByTestId('filter-all');
-			await expect(allFilter).toHaveClass(/active/);
+			await expect(allFilter).toHaveClass(/bg-accent-primary/);
 		});
 
 		test('should filter to web projects when Web Apps filter is clicked', async ({ page }) => {
@@ -152,11 +151,11 @@ test.describe('Homepage Core Flows', () => {
 
 			// Should show 6 web projects (ecommerce-platform, data-visualization-dashboard,
 			// ai-content-generator, social-media-analytics, real-time-chat-platform, inventory-management-system)
-			const visibleProjects = projectsGrid.locator('.project-card');
+			const visibleProjects = projectsGrid.locator('> div[data-testid^="project-"]');
 			await expect(visibleProjects).toHaveCount(6);
 
 			// Verify the filter is active
-			await expect(webFilter).toHaveClass(/active/);
+			await expect(webFilter).toHaveClass(/bg-accent-primary/);
 
 			// Verify specific web projects are visible
 			await expect(projectsGrid.getByTestId('project-ecommerce-platform')).toBeVisible();
@@ -173,11 +172,11 @@ test.describe('Homepage Core Flows', () => {
 			await mobileFilter.click();
 
 			// Should show 2 mobile projects (task-manager-mobile, fitness-tracker-app)
-			const visibleProjects = projectsGrid.locator('.project-card');
+			const visibleProjects = projectsGrid.locator('> div[data-testid^="project-"]');
 			await expect(visibleProjects).toHaveCount(2);
 
 			// Verify the filter is active
-			await expect(mobileFilter).toHaveClass(/active/);
+			await expect(mobileFilter).toHaveClass(/bg-accent-primary/);
 
 			// Verify specific mobile projects are visible
 			await expect(projectsGrid.getByTestId('project-task-manager-mobile')).toBeVisible();
@@ -194,11 +193,11 @@ test.describe('Homepage Core Flows', () => {
 			await dataFilter.click();
 
 			// Should show 2 data projects (data-visualization-dashboard, social-media-analytics)
-			const visibleProjects = projectsGrid.locator('.project-card');
+			const visibleProjects = projectsGrid.locator('> div[data-testid^="project-"]');
 			await expect(visibleProjects).toHaveCount(2);
 
 			// Verify the filter is active
-			await expect(dataFilter).toHaveClass(/active/);
+			await expect(dataFilter).toHaveClass(/bg-accent-primary/);
 
 			// Verify specific data projects are visible
 			await expect(projectsGrid.getByTestId('project-data-visualization-dashboard')).toBeVisible();
@@ -216,11 +215,11 @@ test.describe('Homepage Core Flows', () => {
 
 			// Should show 3 automation projects (ai-content-generator, devops-automation-suite,
 			// inventory-management-system)
-			const visibleProjects = projectsGrid.locator('.project-card');
+			const visibleProjects = projectsGrid.locator('> div[data-testid^="project-"]');
 			await expect(visibleProjects).toHaveCount(3);
 
 			// Verify the filter is active
-			await expect(automationFilter).toHaveClass(/active/);
+			await expect(automationFilter).toHaveClass(/bg-accent-primary/);
 
 			// Verify specific automation projects are visible
 			await expect(projectsGrid.getByTestId('project-devops-automation-suite')).toBeVisible();
@@ -234,15 +233,15 @@ test.describe('Homepage Core Flows', () => {
 
 			// First, filter to mobile
 			await page.getByTestId('filter-mobile').click();
-			await expect(projectsGrid.locator('.project-card')).toHaveCount(2);
+			await expect(projectsGrid.locator('> div[data-testid^="project-"]')).toHaveCount(2);
 
 			// Then click "All Projects"
 			const allFilter = page.getByTestId('filter-all');
 			await allFilter.click();
 
 			// Should show all 9 projects again
-			await expect(projectsGrid.locator('.project-card')).toHaveCount(9);
-			await expect(allFilter).toHaveClass(/active/);
+			await expect(projectsGrid.locator('> div[data-testid^="project-"]')).toHaveCount(9);
+			await expect(allFilter).toHaveClass(/bg-accent-primary/);
 		});
 	});
 
