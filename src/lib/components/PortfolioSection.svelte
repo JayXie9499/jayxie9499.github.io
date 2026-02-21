@@ -72,7 +72,7 @@
 								href={project.githubUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="flex items-center gap-2 px-4 py-2 font-medium text-accent-primary transition-all duration-(--transition-fast) hover:translate-x-1 hover:bg-[rgba(79,70,229,0.1)]"
+								class="flex items-center gap-2 px-4 py-2 font-medium text-accent-primary transition-all duration-(--transition-fast) hover:translate-x-1 hover:bg-[rgba(132,204,22,0.1)]"
 								data-testid={`project-github-${project.id}`}
 								aria-label="查看 GitHub 專案"
 							>
@@ -94,7 +94,7 @@
 								href={project.liveUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="flex items-center gap-2 px-4 py-2 font-medium text-accent-primary transition-all duration-(--transition-fast) hover:translate-x-1 hover:bg-[rgba(79,70,229,0.1)]"
+								class="flex items-center gap-2 px-4 py-2 font-medium text-accent-primary transition-all duration-(--transition-fast) hover:translate-x-1 hover:bg-[rgba(132,204,22,0.1)]"
 								data-testid={`project-live-${project.id}`}
 								aria-label="查看線上展示"
 							>
