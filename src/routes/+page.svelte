@@ -126,7 +126,7 @@
 						href={link.href}
 						onclick={(e) => handleNavClick(e, link.href)}
 						class="nav-link"
-						data-testid={`nav-link-${link.label.toLowerCase()}`}
+						data-testid={`nav-link-${link.id}`}
 					>
 						{link.label}
 					</a>
@@ -160,7 +160,7 @@
 		></div>
 		<div class="mobile-menu-drawer" data-testid="mobile-drawer">
 			<div class="mobile-menu-header">
-				<span class="mobile-menu-title">Menu</span>
+				<span class="mobile-menu-title">選單</span>
 				<button
 					class="mobile-menu-close"
 					onclick={closeMobileMenu}
@@ -176,7 +176,7 @@
 						href={link.href}
 						onclick={(e) => handleNavClick(e, link.href)}
 						class="mobile-nav-link"
-						data-testid={`mobile-nav-link-${link.label.toLowerCase()}`}
+						data-testid={`mobile-nav-link-${link.id}`}
 					>
 						{link.label}
 					</a>
@@ -209,7 +209,7 @@
 					class="btn btn-primary"
 					data-testid="cta-about"
 				>
-					Get to Know Me
+					查看簡介
 				</a>
 				<a
 					href="#portfolio"
@@ -217,7 +217,7 @@
 					class="btn btn-secondary"
 					data-testid="cta-portfolio"
 				>
-					View Portfolio
+					檢視作品
 				</a>
 			</div>
 		</div>
@@ -229,7 +229,7 @@
 			<div class="about-education-grid">
 				<!-- About Column -->
 				<div class="about-column">
-					<h2 class="section-title">About Me</h2>
+					<h2 class="section-title">關於我</h2>
 					<div class="about-content">
 						{#each resume.aboutExtended as paragraph, index (index)}
 							<p class="about-paragraph">{paragraph}</p>
@@ -238,7 +238,7 @@
 
 					<!-- Contact & Social Links -->
 					<div class="contact-section" id="contact">
-						<h3 class="subsection-title">Let's Connect</h3>
+						<h3 class="subsection-title">聯絡方式</h3>
 						<div class="contact-info">
 							<a href={`mailto:${resume.email}`} class="contact-item">
 								<span class="contact-icon">📧</span>
@@ -273,7 +273,7 @@
 
 				<!-- Education Column -->
 				<div class="education-column">
-					<h2 class="section-title">Education</h2>
+					<h2 class="section-title">學歷</h2>
 					<div class="education-timeline">
 						{#each education as edu (edu.degree + edu.institution)}
 							<div class="education-card" data-testid="education-card">
@@ -295,7 +295,7 @@
 	<!-- Tech Stack Section -->
 	<section class="tech-stack" id="tech-stack" data-testid="tech-stack-section">
 		<div class="container">
-			<h2 class="section-title">Tech Stack</h2>
+			<h2 class="section-title">技術棧</h2>
 			<div class="tech-categories">
 				{#each skillCategories as category (category.category)}
 					<div
@@ -323,7 +323,7 @@
 	<!-- Portfolio Section -->
 	<section class="portfolio" id="portfolio" data-testid="portfolio-section">
 		<div class="container">
-			<h2 class="section-title">Portfolio</h2>
+			<h2 class="section-title">作品集</h2>
 
 			<!-- Filter Buttons -->
 			<div class="portfolio-filters" data-testid="portfolio-filters">
@@ -360,7 +360,7 @@
 									rel="noopener noreferrer"
 									class="project-link"
 									data-testid={`project-github-${project.id}`}
-									aria-label="View on GitHub"
+									aria-label="查看 GitHub 專案"
 								>
 									<svg
 										class="project-icon"
@@ -382,7 +382,7 @@
 									rel="noopener noreferrer"
 									class="project-link"
 									data-testid={`project-live-${project.id}`}
-									aria-label="View live demo"
+									aria-label="查看線上展示"
 								>
 									<svg
 										class="project-icon"
@@ -396,7 +396,7 @@
 										<polyline points="15 3 21 3 21 9" />
 										<line x1="10" y1="14" x2="21" y2="3" />
 									</svg>
-									Live Demo
+									線上展示
 								</a>
 							{/if}
 						</div>
