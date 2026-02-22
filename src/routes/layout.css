@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=LXGW+WenKai+Screen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/monaspace-neon@5.2.5/index.css');
 @import 'tailwindcss';
 
 /* ============================================
@@ -23,7 +24,7 @@
 	--font-family-primary: 'Monaspace Neon', 'Intel One Mono', monospace;
 	--font-family-mono: 'Monaspace Neon', 'Intel One Mono', monospace;
 	--font-family-display: 'Syne', 'Space Grotesk', sans-serif;
-	--font-family-cjk: 'LXGW WenKai Screen', 'Noto Sans TC', sans-serif;
+	--font-family-cjk: 'LXGW WenKai TC', 'Noto Sans TC', serif;
 
 	/* Spacing */
 	--spacing-xs: 0.5rem;
