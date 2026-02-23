@@ -21,6 +21,17 @@ export interface SkillCategory {
 	skills: Skill[];
 }
 
+export interface SkillIconCredit {
+	skillName: string;
+	icon: string;
+	sourceName: string;
+	sourceUrl?: string;
+	license: string;
+	licenseUrl?: string;
+	modified?: boolean;
+	note?: string;
+}
+
 export interface NavigationLink {
 	id: string;
 	label: string;
@@ -121,6 +132,7 @@ export const skillCategories: SkillCategory[] = [
 			{ name: 'JavaScript', icon: 'javascript' },
 			{ name: 'TypeScript', icon: 'typescript' },
 			{ name: 'Svelte', icon: 'svelte' },
+			{ name: 'Vue.js', icon: 'vuedotjs' },
 			{ name: 'Tailwind CSS', icon: 'tailwindcss' },
 			{ name: 'Flutter', icon: 'flutter' }
 		]
@@ -158,6 +170,225 @@ export const skillCategories: SkillCategory[] = [
 	}
 ];
 
+export const skillIconCredits: SkillIconCredit[] = [
+	{
+		skillName: 'HTML',
+		icon: 'html5',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/html5.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'CSS',
+		icon: 'css',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/css.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'JavaScript',
+		icon: 'javascript',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/javascript.svg',
+		license: 'MIT',
+		licenseUrl: 'https://spdx.org/licenses/MIT',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'TypeScript',
+		icon: 'typescript',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/typescript.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'Svelte',
+		icon: 'svelte',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/svelte.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'Vue.js',
+		icon: 'vuedotjs',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/vuedotjs.svg',
+		license: 'CC-BY-NC-SA-4.0',
+		licenseUrl: 'https://spdx.org/licenses/CC-BY-NC-SA-4.0',
+		modified: true,
+		note: 'Modified for color fill. Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'Tailwind CSS',
+		icon: 'tailwindcss',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/tailwindcss.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'Flutter',
+		icon: 'flutter',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/flutter.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'Node.js',
+		icon: 'nodedotjs',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/nodedotjs.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'Python',
+		icon: 'python',
+		sourceName: 'Python.org',
+		sourceUrl: 'https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'Express',
+		icon: 'express',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/express.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'FastAPI',
+		icon: 'fastapi',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/fastapi.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'REST',
+		icon: 'rest',
+		sourceName: 'Project custom icon',
+		license: 'Proprietary (this project)',
+		note: 'Drawn and maintained in this repository.'
+	},
+	{
+		skillName: 'GraphQL',
+		icon: 'graphql',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/graphql.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'PostgreSQL',
+		icon: 'postgresql',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/postgresql.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'Redis',
+		icon: 'redis',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/redis.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'MongoDB',
+		icon: 'mongodb',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/mongodb.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'SQLite',
+		icon: 'sqlite',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/sqlite.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'Docker',
+		icon: 'docker',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/docker.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'GitHub Actions',
+		icon: 'githubactions',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/githubactions.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'AWS',
+		icon: 'aws',
+		sourceName: 'Wikimedia Commons (source: Amazon)',
+		sourceUrl: 'https://commons.wikimedia.org/wiki/File:Amazon_Web_Services_Logo.svg',
+		license: 'Apache License 2.0',
+		licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0',
+		note: 'Copyright Amazon Web Services; trademark usage still follows AWS trademark guidelines.'
+	},
+	{
+		skillName: 'GCP',
+		icon: 'googlecloud',
+		sourceName: 'Wikimedia Commons',
+		sourceUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg',
+		license: 'CC0 1.0 Universal',
+		modified: true,
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Modified for text removal. Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'Railway',
+		icon: 'railway',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/railway.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		skillName: 'Cloudflare',
+		icon: 'cloudflare',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/cloudflare.svg',
+		license: 'CC0 1.0 Universal',
+		licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+		note: 'Brand names and trademarks belong to their respective owners.'
+	}
+];
+
 export const projects: Project[] = [
 	{
 		id: '1',
@@ -178,6 +409,16 @@ export const projects: Project[] = [
 		technologies: ['Python'],
 		githubUrl: 'https://github.com/JayXie9499/password-strength-checker',
 		liveUrl: '/password-strength-checker'
+	},
+	{
+		id: '3',
+		title: 'Pomodoro Timer',
+		description:
+			'A simple Pomodoro timer built with Vue 3. Supports custom intervals, plays a ringtone at phase transitions, and allows volume adjustment.',
+		type: [],
+		technologies: ['Vue.js'],
+		githubUrl: 'https://github.com/JayXie9499/pomodoro-timer',
+		liveUrl: '/pomodoro-timer'
 	}
 ];
 
