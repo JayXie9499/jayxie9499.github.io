@@ -419,7 +419,7 @@ export const projects: Project[] = [
 		description:
 			'A simple web app that displays a random daily quote, built with HTML, CSS, and JavaScript.',
 		type: [],
-		technologies: ['HTML', 'CSS', 'JavaScript'],
+		technologies: ['HTML', 'CSS', 'JavaScript', 'RWD', 'Local Storage'],
 		githubUrl: 'https://github.com/JayXie9499/daily-quote-generator',
 		liveUrl: '/daily-quote-generator'
 	},
@@ -439,7 +439,7 @@ export const projects: Project[] = [
 		description:
 			'A simple Pomodoro timer built with Vue 3. Supports custom intervals, plays a ringtone at phase transitions, and allows volume adjustment.',
 		type: [],
-		technologies: ['Vue.js', 'CSS', 'JavaScript'],
+		technologies: ['Vue.js', 'CSS', 'JavaScript', 'RWD'],
 		githubUrl: 'https://github.com/JayXie9499/pomodoro-timer',
 		liveUrl: '/pomodoro-timer'
 	}
