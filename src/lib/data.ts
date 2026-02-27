@@ -421,6 +421,13 @@ export const iconCredits: IconCredit[] = [
 		sourceName: 'X',
 		sourceUrl: 'https://about.x.com/who-we-are/brand-toolkit',
 		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		name: 'React',
+		icon: 'react',
+		sourceName: 'Wikimedia Commons',
+		sourceUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
+		note: 'Brand names and trademarks belong to their respective owners.'
 	}
 ];
 
