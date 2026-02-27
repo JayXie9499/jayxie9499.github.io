@@ -1,6 +1,6 @@
 # personal-website
 
-A static personal website and digital business card built with SvelteKit, featuring a Linux TWM (Tiling Window Manager) dark terminal aesthetic.
+A static personal website and digital business card built with SvelteKit.
 
 ## Tech Stack
 
@@ -9,10 +9,6 @@ A static personal website and digital business card built with SvelteKit, featur
 - **Language**: TypeScript 5.9
 - **Testing**: Playwright (E2E)
 - **Deployment**: GitHub Pages (adapter-static)
-
-## Design
-
-The UI draws from the Linux developer workstation aesthetic — dark theme, zero border-radius, 1px solid borders, and terminal-style interactions. Typography uses Syne and Space Grotesk for headings, Intel One Mono for body and code, and LXGW WenKai Screen for Chinese text. All site copy is in Traditional Chinese (zh-TW).
 
 ## Getting Started
 
